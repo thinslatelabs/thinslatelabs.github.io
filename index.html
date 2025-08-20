@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinslate Labs, LLC - Building Tomorrow's Software Tools</title>
+    <meta name="description" content="Thinslate Labs is a Delaware-based software startup developing innovative tools and apps. Our flagship product OktoNote is an AI-powered note-taking app that transforms thoughts into organized knowledge.">
+    <meta name="keywords" content="software startup, AI apps, note-taking, productivity tools, Delaware startup, tech company">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thinslate Labs, LLC - Building Tomorrow's Software Tools">
+    <meta property="og:description" content="Innovative software startup creating AI-powered productivity tools. Home of OktoNote, the intelligent note-taking app.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thinslatelabs.us">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --dark-gray: #1f2937;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --success: #10b981;
+            --border-color: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--medium-gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: var(--secondary-purple);
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .about-text p {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features {
+            list-style: none;
+        }
+        
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--medium-gray);
+        }
+        
+        .feature-icon {
+            color: var(--success);
+            width: 20px;
+            height: 20px;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 6rem 0;
+            background: var(--light-gray);
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-icon {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-icon i {
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .product-description {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .product-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .app-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .app-store-btn:hover {
+            background: #374151;
+            transform: translateY(-2px);
+        }
+        
+        .website-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: transparent;
+            color: var(--primary-blue);
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .website-btn:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .contact-icon {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .contact-icon i {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+        
+        .contact-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark-gray);
+        }
+        
+        .contact-details {
+            color: var(--medium-gray);
+        }
+        
+        .contact-details a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-description {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .product-links {
+                flex-direction: column;
+            }
+        }
+        
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Thinslate Labs</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Building Tomorrow's Software Tools</h1>
+            <p class="fade-in">Thinslate Labs is a Delaware-based software startup focused on creating innovative tools and applications that enhance productivity and simplify digital workflows.</p>
+            <a href="#products" class="cta-button fade-in">
+                <i data-feather="arrow-right"></i>
+                Explore Our Products
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">About Thinslate Labs</h2>
+                <p class="section-subtitle">We're passionate about creating software that makes complex tasks simple and intuitive</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <h3>Innovation Through Simplicity</h3>
+                    <p>At Thinslate Labs, we believe the best software solutions are those that feel effortless to use. Our team is dedicated to building tools that leverage cutting-edge technology while maintaining user-friendly interfaces.</p>
+                    <p>Founded as a Delaware LLC, we're committed to developing applications that solve real-world problems for individuals and businesses alike.</p>
+                </div>
+                
+                <div class="fade-in">
+                    <ul class="about-features">
+                        <li>
+                            <i data-feather="cpu" class="feature-icon"></i>
+                            AI-powered solutions
+                        </li>
+                        <li>
+                            <i data-feather="users" class="feature-icon"></i>
+                            User-centric design
+                        </li>
+                        <li>
+                            <i data-feather="zap" class="feature-icon"></i>
+                            Performance focused
+                        </li>
+                        <li>
+                            <i data-feather="shield" class="feature-icon"></i>
+                            Privacy first approach
+                        </li>
+                        <li>
+                            <i data-feather="smartphone" class="feature-icon"></i>
+                            Cross-platform compatibility
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Products</h2>
+                <p class="section-subtitle">Innovative applications designed to enhance your productivity</p>
+            </div>
+            
+            <div class="product-card fade-in">
+                <div class="product-icon">
+                    <i data-feather="edit-3"></i>
+                </div>
+                <h3 class="product-title">OktoNote</h3>
+                <p class="product-description">
+                    An AI-powered note-taking app that transforms any input - text, voice, photos, or documents - into organized knowledge cards. OktoNote automatically categorizes your content as tasks, todos, journals, itineraries, links, attachments, lists, discussion notes, details to remember, and study materials. Features include offline-first functionality, intelligent semantic search, and a beautiful paper-inspired interface.
+                </p>
+                <div class="product-links">
+                    <a href="https://apps.apple.com/app/6749813362" class="app-store-btn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        Download on App Store
+                    </a>
+                    <a href="https://oktonote.app" class="website-btn" target="_blank" rel="noopener">
+                        <i data-feather="globe"></i>
+                        Visit Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <i data-feather="mail"></i>
+                    </div>
+                    <h3 class="contact-title">Email Us</h3>
+                    <div class="contact-details">
+                        <a href="mailto:vasanthpsriram@gmail.com">vasanthpsriram@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <i data-feather="map-pin"></i>
+                    </div>
+                    <h3 class="contact-title">Address</h3>
+                    <div class="contact-details">
+                        131 Continental Dr, Suite 305<br>
+                        Newark, Delaware 19713<br>
+                        United States
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Thinslate Labs, LLC</div>
+                <p class="footer-description">
+                    Building innovative software tools that enhance productivity and simplify digital workflows.
+                </p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thinslate Labs, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            fadeInElements.forEach(el => observer.observe(el));
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
