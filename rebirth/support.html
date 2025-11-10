@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Rebirth</title>
+    <meta name="description" content="Get help with Rebirth. Find answers to common questions and contact our support team.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        :root {
+            --primary-teal: #14b8a6;
+            --dark-navy: #0c1b2e;
+            --medium-navy: #1e3a5f;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--dark-navy);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--medium-navy) 100%);
+            color: var(--white);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .content {
+            padding: 3rem 0;
+        }
+
+        h2 {
+            color: var(--dark-navy);
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            padding-top: 1rem;
+        }
+
+        h3 {
+            color: var(--dark-navy);
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--medium-gray);
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--medium-gray);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary-teal);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .contact-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, #10b981 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--white);
+        }
+
+        .contact-card h3 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .contact-card a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-item {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            color: var(--dark-navy);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-answer {
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        .faq-answer ol, .faq-answer ul {
+            margin: 0.5rem 0 0.5rem 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.25rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--medium-gray);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-teal);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Support</h1>
+        <p>We're here to help</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <a href="index.html" class="back-link">← Back to Rebirth</a>
+
+            <h2>Get In Touch</h2>
+            <p>Have questions or need assistance? We'd love to hear from you!</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="mail" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p><a href="mailto:contact@thinslatelabs.us?subject=Rebirth%20Support">contact@thinslatelabs.us</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i data-feather="instagram" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Follow Us</h3>
+                    <p><a href="https://instagram.com/rebirthapp" target="_blank" rel="noopener">@rebirthapp</a></p>
+                </div>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I add the widget to my home screen?</div>
+                <div class="faq-answer">
+                    <ol>
+                        <li>Long-press on your iPhone home screen until apps start wiggling</li>
+                        <li>Tap the "+" button in the top-left corner</li>
+                        <li>Search for "Rebirth" or scroll to find it</li>
+                        <li>Select the widget size (Large recommended)</li>
+                        <li>Tap "Add Widget"</li>
+                        <li>Position the widget where you'd like it</li>
+                        <li>Tap "Done" in the top-right corner</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I change my affirmation categories?</div>
+                <div class="faq-answer">
+                    <ol>
+                        <li>Open the Rebirth app</li>
+                        <li>Tap the Settings icon (gear icon) in the top-right</li>
+                        <li>Tap "Affirmation Preferences"</li>
+                        <li>Select or deselect categories (minimum 5 required)</li>
+                        <li>Tap "Save" to apply your changes</li>
+                    </ol>
+                    <p>Your new categories will be reflected in both the app and widget.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">My widget isn't updating after purchase - what should I do?</div>
+                <div class="faq-answer">
+                    <p>After purchasing the lifetime access, your widget should update automatically within 5 minutes. However, for an instant update:</p>
+                    <ol>
+                        <li>Look for the refresh button (circular arrow icon) on your widget</li>
+                        <li>Tap the refresh button to immediately check your purchase status</li>
+                        <li>The widget will switch from the marketing view to showing affirmations</li>
+                    </ol>
+                    <p>If you still have issues, try restarting your device or contact support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the lifetime purchase work?</div>
+                <div class="faq-answer">
+                    <p>Rebirth offers a one-time lifetime purchase that includes:</p>
+                    <ul>
+                        <li>Unlimited access to all 22 affirmation categories</li>
+                        <li>Beautiful home screen widgets</li>
+                        <li>All current and future features</li>
+                        <li>No recurring fees or subscriptions</li>
+                    </ul>
+                    <p>Your purchase is linked to your Apple ID and can be restored on any device signed in with the same Apple ID.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I change fonts and backgrounds?</div>
+                <div class="faq-answer">
+                    <ol>
+                        <li>Open the Rebirth app</li>
+                        <li>Tap the Settings icon</li>
+                        <li>Tap "Font" to choose from 4 beautiful font options</li>
+                        <li>Tap "Background" to switch between:
+                            <ul>
+                                <li><strong>Category-Based:</strong> Unique images for each category</li>
+                                <li><strong>Standard:</strong> Gradient background</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Your choices apply to both the app and widget.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where do the quotes and affirmations come from?</div>
+                <div class="faq-answer">
+                    <p>Our affirmations come from carefully curated sources including:</p>
+                    <ul>
+                        <li>Public domain inspirational quotes</li>
+                        <li>Classical wisdom from texts like the Bhagavad Gita and Upanishads</li>
+                        <li>Motivational and self-help literature</li>
+                        <li>Original affirmations created by our team</li>
+                    </ul>
+                    <p>All content is reviewed to ensure it's uplifting, positive, and appropriate for daily inspiration.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How often does the widget update with new affirmations?</div>
+                <div class="faq-answer">
+                    <p>The widget automatically refreshes every 2 hours with a new affirmation. You can also:</p>
+                    <ul>
+                        <li>Tap the shuffle button (in the app or on the widget) for an instant new affirmation</li>
+                        <li>Open the app to see a new affirmation</li>
+                    </ul>
+                    <p>Time-of-day filtering ensures you get morning motivation, afternoon boosts, or evening reflections automatically.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I suggest new categories or features?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! We love hearing from our community. Send your suggestions to:</p>
+                    <p><a href="mailto:contact@thinslatelabs.us?subject=Rebirth%20Feature%20Suggestion">contact@thinslatelabs.us</a></p>
+                    <p>We review all feedback and prioritize features based on user requests.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Rebirth available for Android?</div>
+                <div class="faq-answer">
+                    <p>Rebirth is currently available exclusively for iOS (iPhone and iPad). We're focusing on delivering the best possible experience for iOS users, including beautiful widgets and seamless integration with iOS features.</p>
+                    <p>Follow us on Instagram <a href="https://instagram.com/rebirthapp" target="_blank" rel="noopener">@rebirthapp</a> for updates on potential Android support in the future.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I restore my purchase on a new device?</div>
+                <div class="faq-answer">
+                    <ol>
+                        <li>Install Rebirth on your new device</li>
+                        <li>Make sure you're signed in with the same Apple ID used for the original purchase</li>
+                        <li>Your purchase will be automatically restored</li>
+                        <li>If needed, tap the refresh button on the widget to update its status</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do you collect my personal data?</div>
+                <div class="faq-answer">
+                    <p>No! Rebirth is designed with privacy in mind:</p>
+                    <ul>
+                        <li>We don't collect any personal information</li>
+                        <li>No usage tracking or analytics</li>
+                        <li>All your preferences stay on your device</li>
+                        <li>Only purchase data is processed by RevenueCat for validation</li>
+                    </ul>
+                    <p>See our <a href="privacy.html">Privacy Policy</a> for complete details.</p>
+                </div>
+            </div>
+
+            <h2>Still Have Questions?</h2>
+            <p>If you couldn't find the answer you're looking for, please reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:contact@thinslatelabs.us?subject=Rebirth%20Support">contact@thinslatelabs.us</a></li>
+                <li>Instagram: <a href="https://instagram.com/rebirthapp" target="_blank" rel="noopener">@rebirthapp</a></li>
+            </ul>
+            <p>We typically respond within 24-48 hours.</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <p>&copy; 2025 Thinslate Labs LLC. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
