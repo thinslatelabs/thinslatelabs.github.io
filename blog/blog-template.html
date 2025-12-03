@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>[BLOG_TITLE] | OktoNote Blog</title>
+    <meta name="title" content="[BLOG_TITLE] | OktoNote Blog">
+    <meta name="description" content="[BLOG_DESCRIPTION]">
+    <meta name="keywords" content="[BLOG_KEYWORDS]">
+    <meta name="author" content="OktoNote Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Article Meta -->
+    <meta name="article:published_time" content="[PUBLISH_DATE]T10:00:00+00:00">
+    <meta name="article:modified_time" content="[PUBLISH_DATE]T10:00:00+00:00">
+    <meta name="article:section" content="[CATEGORY]">
+    <meta name="article:tag" content="[TAG1]">
+    <meta name="article:tag" content="[TAG2]">
+    <meta name="article:tag" content="[TAG3]">
+    <meta name="article:author" content="OktoNote Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://oktonote.app/blog/[BLOG_URL].html">
+    <meta property="og:title" content="[BLOG_TITLE]">
+    <meta property="og:description" content="[BLOG_DESCRIPTION]">
+    <meta property="og:image" content="https://oktonote.app/blog/images/[BLOG_URL]-featured.jpg">
+    <meta property="og:site_name" content="OktoNote">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oktonote.app/blog/[BLOG_URL].html">
+    <meta property="twitter:title" content="[BLOG_TITLE]">
+    <meta property="twitter:description" content="[BLOG_DESCRIPTION]">
+    <meta property="twitter:image" content="https://oktonote.app/blog/images/[BLOG_URL]-twitter.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://oktonote.app/blog/[BLOG_URL].html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[BLOG_TITLE]",
+        "description": "[BLOG_DESCRIPTION]",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://oktonote.app/blog/images/[BLOG_URL]-featured.jpg",
+            "width": 1200,
+            "height": 630
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "OktoNote Team"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "OktoNote",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://oktonote.app../images/blog/oktonote-dark.png"
+            }
+        },
+        "datePublished": "[PUBLISH_DATE]T10:00:00+00:00",
+        "dateModified": "[PUBLISH_DATE]T10:00:00+00:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://oktonote.app/blog/[BLOG_URL].html"
+        },
+        "articleSection": "[CATEGORY]",
+        "keywords": [[KEYWORD_ARRAY]],
+        "wordCount": "[WORD_COUNT]"
+    }
+    </script>
+    
+    <!-- CSS SAME AS PREVIOUS POSTS -->
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../css/blog.css">
+    <style>
+        /* Critical styles from main index.html needed for header/footer */
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --dark-gray: #1f2937;
+            --light-gray: #f8fafc;
+            --medium-gray: #64748b;
+            --white: #ffffff;
+            --success: #10b981;
+            --border-color: #e2e8f0;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--dark-gray); }
+        .header { background: white; border-bottom: 1px solid var(--border-color); padding: 1rem 0; }
+        .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--medium-gray); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .footer { background: var(--dark-gray); color: white; padding: 3rem 0; text-align: center; margin-top: auto;}
+        .footer-logo { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-description { color: #9ca3af; margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto; }
+        .footer-bottom { border-top: 1px solid #374151; padding-top: 2rem; font-size: 0.9rem; color: #9ca3af; }
+        
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+        
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="logo" id="header-logo">OktoNote</a>
+                <ul class="nav-links">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../index.html#products">Features</a></li>
+                    <li><a href="./">Blog</a></li>
+                    <li><a href="/support">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Image -->
+    <div class="container">
+        <div class="blog-hero">
+            <img src="../images/blog/blog-hero.jpg" alt="[BLOG_HERO_ALT]" />
+        </div>
+    </div>
+
+    <!-- Article -->
+    <main class="container">
+        <article class="article">
+            <header class="article-header">
+                <h1 class="article-title">[BLOG_TITLE]</h1>
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <i data-feather="calendar" style="width: 16px; height: 16px;"></i>
+                        <time datetime="[PUBLISH_DATE]">[PUBLISH_DATE_FORMATTED]</time>
+                    </div>
+                    <div class="meta-item">
+                        <i data-feather="clock" style="width: 16px; height: 16px;"></i>
+                        <span>[READ_TIME] min read</span>
+                    </div>
+                </div>
+                <p class="article-excerpt">[BLOG_EXCERPT]</p>
+            </header>
+
+            <div class="article-content">
+                <!-- BLOG CONTENT GOES HERE -->
+                
+                <div class="cta-section">
+                    <h3>[CTA_HEADLINE]</h3>
+                    <p>[CTA_DESCRIPTION]</p>
+                    <a href="../" class="cta-button">Try OktoNote Free</a>
+                </div>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-label">Tags:</div>
+                <div class="tag-list">
+                    <!-- TAGS WILL BE INSERTED HERE -->
+                </div>
+            </div>
+        </article>
+
+        <nav class="article-navigation">
+            <a href="[PREVIOUS_POST].html" class="nav-button">
+                <i data-feather="arrow-left" style="width: 16px; height: 16px;"></i>
+                Previous Article
+            </a>
+            <a href="[NEXT_POST].html" class="nav-button">
+                Next Article
+                <i data-feather="arrow-right" style="width: 16px; height: 16px;"></i>
+            </a>
+        </nav>
+    </main>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
